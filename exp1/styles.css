@@ -1,0 +1,54 @@
+
+    #toggle_nav:hover {
+      background-color: #af8383;
+    }
+
+    #aim:hover,
+    #theory:hover,
+    #pretest:hover,
+    #procedure:hover,
+    #simulation:hover,
+    #result:hover,
+    #posttest:hover,
+    #references:hover {
+      background-color: #e99c7e;
+    }
+
+    .main-header {
+      position: fixed;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .main-sidebar {
+      position: fixed;
+      /* top: 100px; */
+      /* إضافة المسافة المطلوبة أسفل الشريط العلوي */
+      left: 0;
+      height: 100%;
+      width: 230px;
+      background-color: #c5c7c0;
+    }
+
+    .logo p {
+      font-size: 12px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .sidebar-menu li a:hover {
+      background-color: #6c6e0f;
+      color: white;
+    }
+
+
+
+    .content-wrapper {
+      margin-left: 230px;
+      margin-top: 20;
+      /* إضافة المسافة بين المحتوى والشريط الجانبي */
+      padding-top: 50;
+      /* إضافة مسافة من الأعلى لتفادي التداخل مع الشريط العلوي */
+    }
+  

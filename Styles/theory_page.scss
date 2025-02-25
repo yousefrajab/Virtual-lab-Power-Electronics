@@ -1,0 +1,303 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.container {
+    padding-top: 19.5vh;
+    background-image: linear-gradient(to left bottom, #5fb2fb, #74bef8, #8bc9f5, #a3d4f2, #bcdef0, #b7daf0, #b2d6ef, #aed2ef, #97bcf0, #90a4ec, #9a87e0, #ac64c9);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 10vh;
+
+    .ckt_diagram {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 2% 5%;
+        margin: 2% 0%;
+        width: 55%;
+        min-height: 70vh;
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+            font-size: 1.4rem;
+        }
+
+        img {
+            height: calc(1080px/3);
+            width: calc(1920px/3);
+            cursor: pointer;
+        }
+    }
+
+    .infoBox {
+        width: 70%;
+        margin-top: 2%;
+        margin-bottom: 1%;
+        padding: 2% 4%;
+
+        h3 {
+            color: darkblue;
+            font-size: 1.2rem;
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            margin:0% 3%;
+            list-style-type: circle;
+
+            li {
+                font-size: 1.1rem;
+                margin: 5px 0px;
+            }
+
+            // this styling is for Expt.1 Mode of operation of SCR
+            ol {
+                margin-left: 5%;
+
+                li {
+                    list-style:decimal;
+
+                    sub {
+                        font-size: 0.75rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        // for DC chopper theory page advantages box
+        ol {
+            margin-left: 5%;
+            li {
+                margin: 10px 0px;
+            }
+
+            span {
+                color: blue;
+                font-weight: 600;
+            }
+        }
+    }
+
+    #additionalTheory {
+        font-size: 1.4rem;
+        font-family: Alice, Helvetica, sans-serif;
+        margin: 4% 0% 2% 0%;
+        color: darkblue;
+    }
+    .accordion {
+        width: 70%;
+
+        .contentBox {
+            position: relative;
+            margin-bottom: 3%;
+
+            .label {
+                position: relative;
+                padding: 10px;
+                background: darkblue;
+                color: whitesmoke;
+                cursor: pointer;
+                transition: 0.1s ease-in-out;
+                font-weight: 600;
+            }
+
+            .label::before {
+                content: '+';
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
+                font-size: 1.5rem;
+                transition: 1.2s ease;
+            }
+
+            .content{
+                position: relative;
+                border-bottom-right-radius: 15px;
+                border-bottom-left-radius: 15px;
+                background-color: rgba(255, 255, 255, 0.29);
+                -webkit-backdrop-filter: blur(14px) brightness(116%);
+                backdrop-filter: blur(14px) brightness(116%);
+                height: 0;
+                overflow: hidden;
+                transition: 0.1s ease-in-out;
+                overflow-y: auto;
+
+                h2 {
+                    color: blue;
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                }
+                ul {
+                    margin:0% 3%;
+                    list-style-type: circle;
+        
+                    li {
+                        font-size: 1.1rem;
+                        margin: 5px 0px;
+                    }
+        
+                    // this styling is for Expt.1 Mode of operation of SCR
+                    ol {
+                        margin-left: 5%;
+        
+                        li {
+                            list-style:decimal;
+        
+                            sub {
+                                font-size: 0.75rem;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+        
+            }
+
+        }
+        .contentBox.active .label::before {
+            
+            content: '-';
+        }
+
+        .contentBox.active {
+            .content {
+                // min-height: 150px;
+                height: fit-content;
+                transition: 0s;
+                padding: 10px 20px;
+                padding: 2% 5%;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+.glassmorphism {
+    //Glassmorphism
+    background: rgba( 255, 255, 255, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 20px;
+}
+
+// ADDITIONAL Styling for DC chopper theory page
+.chopperDifferentLoads, .formula {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#needForFreewheeling_div {
+    display: flex;
+    flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+    #img_div {
+        width: 90%;
+        margin: 15px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2% 0%;
+    
+        img {
+            width: 47%;
+            height: auto;
+        }
+    }
+
+    #switching {
+        align-self: center;
+        border: none;
+        padding: 10px;
+        border-radius: 25px;
+        width: 40%;
+        background-color: #080aff;
+        -webkit-box-shadow: 2px 2px 10px 1px rgba(26,17,255,0.88); 
+        box-shadow: 2px 2px 10px 1px rgba(26,17,255,0.88);
+        transition: all ease-in-out 0.4s;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        color: whitesmoke;
+        font-weight: 800;
+    }
+
+    #switching:hover {
+        background-image: linear-gradient(to left, #100258, #15037e, #1704a7, #1506d2, #080aff);
+        transition: all ease-in-out 0.4s;
+    }
+
+    #explanationText {
+        height: 200px;
+        width: 90%;
+        padding: 15px 20px;
+        background-color: rgba(0,0,0,0.1);
+    }
+}
+
+//ADDITIONAL STYLING for ACVR theory page
+table {
+    margin: 0% 0%;
+    width: 100%;
+    border-spacing: 0px;  //to remove gap between cells
+
+    th, td {
+        border: 1px solid black;
+        padding: 3px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    th {
+        padding: 0.75rem 0rem;
+        background-color: #2d2dfb;
+        color: whitesmoke;
+        font-weight: 700;
+    }
+
+    td {
+        padding: 2%;
+        width: 50%;
+
+        img {
+            width: 90%;
+            margin: auto;
+        }
+    }
+}
+
+.imgDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0px;
+
+    ul {
+        width: 55%;
+        // border: 1px solid black;
+        list-style: square;
+    }
+
+    
+
+}

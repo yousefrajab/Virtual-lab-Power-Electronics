@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Alice&display=swap");
+* {
+  font-family: Alice, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.main_div {
+  height: 100vh;
+  background-image: linear-gradient(to 
+  white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_div .container {
+  width: 40%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 40px;
+}
+.main_div .container h1 {
+  font-size: 1.7rem;
+  font-size: 700;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-bottom: 15px;
+}
+.main_div .container .list .box {
+  padding: 10px 20px;
+  margin: 15px 30px;
+  transition: 0.6s ease-in;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 8px 32px 0 rgba(252, 190, 190, 0.37);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+}
+.main_div .container .list .box a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.main_div .container .list .box:hover {
+  background-color: rgb(248, 116, 116);
+  transition: 0.3s ease;
+}
+
+.mobile_screen_intro {
+  height: 100vh;
+  background-image: linear-gradient(to white);
+  padding: 0% 10%;
+  display: none;
+}
+.mobile_screen_intro h3 {
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border-radius: 5px;
+}
+.mobile_screen_intro h2 {
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  padding: 5rem 3rem;
+  margin-top: 5%;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  body header {
+    display: none;
+  }
+  .main_div {
+    display: none;
+  }
+  .mobile_screen_intro {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}

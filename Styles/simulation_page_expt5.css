@@ -1,0 +1,145 @@
+.simulation{
+    width: 100vw;
+    position: relative;
+}
+
+.option{
+    position: absolute;
+    top:200px;
+    left:400px;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.option>input{
+    margin-right:10px;
+}
+
+.circuit{
+    height:600px;
+    width:1200px;
+    margin-left: 30px;
+    position:relative;
+    top:250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.circuit img{
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.leftImg{
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left:0;
+}
+
+.rightImg{
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left:50%;
+}
+
+#push{
+    position:absolute;
+    top:360px;
+    left:215px;
+}
+
+#switch{
+    position:absolute;
+    top:40px;
+    left:720px;
+}
+
+#inVolt{
+    position:absolute;
+    top:250px;
+    left:0px;
+    height: 30px;
+    width:60px;
+}
+
+#comVolt{
+    position:absolute;
+    top:250px;
+    left:140px;
+    height: 30px;
+    width:60px;
+}
+
+#gateVolt{
+    position:absolute;
+    top:85px;
+    left:1140px;
+    height:30px;
+    width:60px;
+}
+
+#loadRes{
+    position:absolute;
+    top:350px;
+    left:1125px;
+    height:30px;
+    width:95px;
+}
+
+#gateRes{
+    position:absolute;
+    top:70px;
+    left:930px;
+    height:30px;
+    width:95px;
+}
+
+#outVolt{
+    position:absolute;
+    top:340px;
+    left:890px;
+    height:30px;
+    width:60px;
+}
+
+#current{
+    position:absolute;
+    top:100px;
+    left:470px;
+    height:30px;
+    width:80px;   
+}
+
+.invisible{
+    height:100px;
+    width: 100px;
+    z-index: 99;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.invisible:hover{
+    cursor: pointer;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+#output{
+    height:600px;
+    width:450px;
+    position: absolute;
+    top:250px;
+    left:1250px;
+    overflow: hidden;
+}

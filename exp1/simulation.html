@@ -1,0 +1,278 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Electronics Lab</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+  <!-- Simulation scripts start-->
+  <script src="src/math.ob.js"></script>
+
+  <script src="src/numcheck.ob.js"></script>
+  <script src="src/canvasjschart.ob.js"></script>
+  <script src="src/bracket.ob.js"></script>
+  <link href="src/StyleSheet1.css" rel="stylesheet" />
+  <script>
+    window.onload = function () {
+      document.getElementById("simulation").className = "active treeview";
+    }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial;
+    }
+
+    /* Style the tab */
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+
+    /* Style the close button */
+    .topright {
+      float: right;
+      cursor: pointer;
+      font-size: 28px;
+    }
+
+    .topright:hover {
+      color: red;
+    }
+  </style>
+  <!-- Simulation scripts end-->
+  <style>
+    
+
+    #simulation {
+      background-color: #f35858;
+    }
+
+    .link-button {
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      background-color: #4CAF50;
+      /* لون الخلفية */
+      padding: 15px 30px;
+      /* حجم الزر */
+      border-radius: 8px;
+      /* حواف الزر تكون مستديرة */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      /* تأثير الظل */
+      transition: all 0.3s ease;
+      /* تأثير التغيير عند التفاعل */
+    }
+
+    .link-button:hover {
+      background-color: #45a049;
+      /* تغيير اللون عند المرور فوق الزر */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      /* زيادة الظل عند المرور */
+      transform: translateY(-2px);
+      /* حركة بسيطة عند المرور */
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+
+  <!--Navigation Bar-->
+
+  <div class="wrapper">
+    <header class="main-header">
+      <!-- Logo -->
+      <a href="../index.html" class="logo"
+        style="background-color:black; border-right:solid;border-right-color: white;">
+        <p align="center" style="font-size:16px;"><b>Electronics Lab</b></p>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top" style="background-color:black;">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" id="toggle_nav">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+
+        <section class="content-header">
+          <ol class="breadcrumb">
+            <li>
+              <a href="../index.html"><i class="fa fa-dashboard"></i>Electronics Lab</a>
+            </li>
+            <li>
+              <a href="#">V-I Characteristics of IGBT</a>
+            </li>
+            <li class="active">Simulation</li>
+          </ol>
+        </section>
+      </nav>
+    </header>
+
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar" style="background-color: #0c0c0c">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+          <div class="input-group"></div>
+        </form>
+        <!-- /.sear ch form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" style="background-color: #0a0a0a">
+          <li class="treeview" id="aim">
+            <a href="index.html" id="aim">
+              <i class="fa fa-crosshairs" style="color: white"></i>
+              <span style="color: white">Aim</span>
+
+
+              <!--  This is our section aim-->
+            </a>
+          </li>
+          <li class="treeview" id="theory">
+            <a href="theory.html" style="color: white" id="theory">
+              <i class="fa fa-bar-chart" style="color: white"></i>
+              <span>Theory</span>
+            </a>
+
+
+          </li>
+          <li class="treeview" id="pretest">
+            <a href="pretest.html" style="color: white" id="pretest">
+              <i class="fa fa-check-square" style="color: white"></i>
+              <span>Pre Test</span>
+            </a>
+
+          </li>
+
+          <li class="treeview" id="procedure">
+            <a href="procedure.html" style="color: white" id="procedure">
+              <i class="fa fa-cogs" style="color: white"></i>
+              <span>Procedure</span>
+            </a>
+
+          </li>
+          <li class="treeview" id="simulation">
+            <a href="simulation.html" style="color: white" id="simulation">
+              <i class="fa fa-tv" style="color: white"></i>
+              <span>Simulation</span>
+            </a>
+
+          </li>
+
+          <li class="treeview" id="posttest">
+            <a href="posttest.html" style="color: white" id="posttest">
+              <i class="fa fa-trophy" style="color: white"></i>
+              <span>Post Test</span>
+            </a>
+
+          </li>
+          <li class="treeview" id="ref">
+            <a href="references.html" style="color: white" id="references">
+              <i class="fa fa-link" style="color: white"></i>
+              <span>References</span>
+            </a>
+
+          </li>
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header" style="width: 100%; text-align: center; margin-bottom: 20px;">
+        <h1 class="experiment-title"
+          style="font-weight: bold; font-size: 2rem; color: #333; text-transform: uppercase; letter-spacing: 1px;">
+          Voltage Current Characteristics of Insulated Gate Bipolar Transistor (IGBT)
+        </h1>
+      </section>
+      <script type="text/javascript">
+        // Popup window code
+        function newPopup(url) {
+          popupWindow = window.open(url, 'popUpWindow', 'height=500,width=650,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,directories=no,status=yes')
+        }
+      </script>
+      <section class="content-header" style="float:right; margin-top:2%">
+        <a href="JavaScript:newPopup('procedure.html');" style="color:green;font-size: 16px"><img
+            src="dist/img/popout.png" alt="" style="height:20px; width:20px; "> Pop Up Procedure</a>
+        <br>
+        <br>
+      </section>
+
+      <!--<section class="content-header" style="float:right; margin-top:2%">
+                <a href="JavaScript:newPopup('procedure.html');" style="color:green;font-size: 16px"><img src="dist/img/popout.png" alt="Pop Out Icon" style="height:20px; width:20px; "> Pop Up Procedure</a>
+                <br><br>
+            </section>-->
+
+      <!-- Main content -->
+      <section class="content" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <a href="simulation/index.html" class="link-button">Go to Simulation</a>
+      </section>
+      <!-- /.content -->
+    </div>
+
+    <footer class="main-footer">
+      <h4 align="center">Lab contributed by .....<!-- Institute Name --> </h4>
+    </footer>
+    <!-- /.content-wrapper -->
+  </div>
+
+</body>
+
+</html>
+
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/app.min.js"></script>

@@ -1,0 +1,253 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.container {
+  padding-top: 19.5vh;
+  background-image: linear-gradient(to left bottom, #5fb2fb, #74bef8, #8bc9f5, #a3d4f2, #bcdef0, #b7daf0, #b2d6ef, #aed2ef, #97bcf0, #90a4ec, #9a87e0, #ac64c9);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 10vh;
+}
+.container .ckt_diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2% 5%;
+  margin: 2% 0%;
+  width: 55%;
+  min-height: 70vh;
+}
+.container .ckt_diagram h1 {
+  text-align: center;
+  color: darkblue;
+  font-size: 1.4rem;
+}
+.container .ckt_diagram img {
+  height: 360px;
+  width: 640px;
+  cursor: pointer;
+}
+.container .infoBox {
+  width: 70%;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  padding: 2% 4%;
+}
+.container .infoBox h3 {
+  color: darkblue;
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+.container .infoBox p {
+  text-align: justify;
+  font-size: 1.1rem;
+}
+.container .infoBox ul {
+  margin: 0% 3%;
+  list-style-type: circle;
+}
+.container .infoBox ul li {
+  font-size: 1.1rem;
+  margin: 5px 0px;
+}
+.container .infoBox ul ol {
+  margin-left: 5%;
+}
+.container .infoBox ul ol li {
+  list-style: decimal;
+}
+.container .infoBox ul ol li sub {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.container .infoBox ol {
+  margin-left: 5%;
+}
+.container .infoBox ol li {
+  margin: 10px 0px;
+}
+.container .infoBox ol span {
+  color: blue;
+  font-weight: 600;
+}
+.container #additionalTheory {
+  font-size: 1.4rem;
+  font-family: Alice, Helvetica, sans-serif;
+  margin: 4% 0% 2% 0%;
+  color: darkblue;
+}
+.container .accordion {
+  width: 70%;
+}
+.container .accordion .contentBox {
+  position: relative;
+  margin-bottom: 3%;
+}
+.container .accordion .contentBox .label {
+  position: relative;
+  padding: 10px;
+  background: darkblue;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+  font-weight: 600;
+}
+.container .accordion .contentBox .label::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  transition: 1.2s ease;
+}
+.container .accordion .contentBox .content {
+  position: relative;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.29);
+  -webkit-backdrop-filter: blur(14px) brightness(116%);
+  backdrop-filter: blur(14px) brightness(116%);
+  height: 0;
+  overflow: hidden;
+  transition: 0.1s ease-in-out;
+  overflow-y: auto;
+}
+.container .accordion .contentBox .content h2 {
+  color: blue;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.container .accordion .contentBox .content ul {
+  margin: 0% 3%;
+  list-style-type: circle;
+}
+.container .accordion .contentBox .content ul li {
+  font-size: 1.1rem;
+  margin: 5px 0px;
+}
+.container .accordion .contentBox .content ul ol {
+  margin-left: 5%;
+}
+.container .accordion .contentBox .content ul ol li {
+  list-style: decimal;
+}
+.container .accordion .contentBox .content ul ol li sub {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.container .accordion .contentBox.active .label::before {
+  content: "-";
+}
+.container .accordion .contentBox.active .content {
+  height: -moz-fit-content;
+  height: fit-content;
+  transition: 0s;
+  padding: 10px 20px;
+  padding: 2% 5%;
+  font-size: 1.2rem;
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border-radius: 20px;
+}
+
+.chopperDifferentLoads, .formula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#needForFreewheeling_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#needForFreewheeling_div #img_div {
+  width: 90%;
+  margin: 15px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 0%;
+}
+#needForFreewheeling_div #img_div img {
+  width: 47%;
+  height: auto;
+}
+#needForFreewheeling_div #switching {
+  align-self: center;
+  border: none;
+  padding: 10px;
+  border-radius: 25px;
+  width: 40%;
+  background-color: #080aff;
+  box-shadow: 2px 2px 10px 1px rgba(26, 17, 255, 0.88);
+  transition: all ease-in-out 0.4s;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  color: whitesmoke;
+  font-weight: 800;
+}
+#needForFreewheeling_div #switching:hover {
+  background-image: linear-gradient(to left, #100258, #15037e, #1704a7, #1506d2, #080aff);
+  transition: all ease-in-out 0.4s;
+}
+#needForFreewheeling_div #explanationText {
+  height: 200px;
+  width: 90%;
+  padding: 15px 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+table {
+  margin: 0% 0%;
+  width: 100%;
+  border-spacing: 0px;
+}
+table th, table td {
+  border: 1px solid black;
+  padding: 3px;
+  text-align: center;
+  vertical-align: middle;
+}
+table th {
+  padding: 0.75rem 0rem;
+  background-color: #2d2dfb;
+  color: whitesmoke;
+  font-weight: 700;
+}
+table td {
+  padding: 2%;
+  width: 50%;
+}
+table td img {
+  width: 90%;
+  margin: auto;
+}
+
+.imgDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+.imgDiv ul {
+  width: 55%;
+  list-style: square;
+}/*# sourceMappingURL=theory_page.css.map */
